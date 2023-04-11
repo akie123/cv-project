@@ -7,7 +7,7 @@ import cv2
 from input_retrieval import *
 
 #All these classes will be counted as 'vehicles'
-list_of_vehicles = ["bicycle","car","motorbike","bus","truck", "train"]
+list_of_vehicles = ["bicycle","car","motorbike","bus","truck"]
 # Setting the threshold for the number of frames to search a vehicle for
 FRAMES_BEFORE_CURRENT = 10  
 inputWidth, inputHeight = 416, 416
@@ -15,7 +15,7 @@ inputWidth, inputHeight = 416, 416
 #Parse command line arguments and extract the values required
 LABELS, weightsPath, configPath, inputVideoPath, outputVideoPath,\
 	preDefinedConfidence, preDefinedThreshold, USE_GPU= parseCommandLineArguments()
-
+print(LABELS)
 # Initialize a list of colors to represent each possible class label
 np.random.seed(42)
 COLORS = np.random.randint(0, 255, size=(len(LABELS), 3),
